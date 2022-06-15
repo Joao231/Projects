@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<style>
+		body{
+		background-color: aliceblue;
+		}
+		h1{
+		color: red;
+		}
+		<title>Pesquisa de Relatórios</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</style>		
+	</head>
+
+	<body>
+		<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+		<h1 style="text-align: center;">Pesquisa de relatórios por: "{{pesquisa}}"</h1>
+		<br><br><center><a href="javascript:history.back()">Go back</a></center>
+		<hr>
+		<br><br>
+		{% for el in dic_rel  %}
+			<h2><a href="/relatorios/relatorio/<{{el[0]}}>">{{el[1:]}}</a></h2>
+			{% for i in dic_rel[el]  %}
+				<p  align="justify">{{i}}</p>
+			{% endfor %}
+			<br>
+		{% endfor %}
+	</body>
+</html>

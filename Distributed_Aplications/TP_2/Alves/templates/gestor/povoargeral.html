@@ -1,0 +1,23 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/povoar/populate_medicamentos/" class="w3-button w3-block w3-black">Povoar Medicamentos</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/povoar/populate_utentes/" class="w3-button w3-block w3-black">Povoar Utentes</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/povoar/populate_medicos/" class="w3-button w3-block w3-black">Povoar Médicos</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/povoar/populate_funcionarios/" class="w3-button w3-block w3-black">Povoar Funcionários</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/povoar/populate_fichasmedicas/" class="w3-button w3-block w3-black">Povoar Fichas Médicas</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/povoar/populate_consultas/" class="w3-button w3-block w3-black">Povoar Consultas</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/povoar/add_historico/" class="w3-button w3-block w3-black">Povoar Histórico</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/" class="w3-button w3-block w3-black">Voltar</a></button>
+
+    </form>
+{% endblock %}

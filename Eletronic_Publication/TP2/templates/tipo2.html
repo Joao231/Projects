@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<style>
+		body{
+		background-color: aliceblue;
+		}
+		h1{
+		color: red;
+		}
+		<meta charset="UTF-8"/>
+		<title> {{tit}} </title>
+	</style>
+	</head>
+	<body>
+		<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+		<h1 style="text-align: center;"> {{tit}} </h1><br>
+		<h2 style="text-align: center;"> {{subt}} </h2><br>
+		<center><img src="{{iimage}}"/></center><br>
+	
+		<h3>Autores</h3>
+		<ul>
+			{% for el in authors  %}
+				<li> {{el['name']}} : {{el['number']}} </li>
+			{% endfor %}
+		</ul>
+		<h3 style="text-align: center;"> {{Masters}} </h3><br>
+		<center><a href="#section1">Conclusão</a>
+        <a href="#section2">Referências</a></center>
+        <hr>
+		{% for el in content  %}
+			<p align="justify">{{el}}</p>
+		{% endfor %}
+		<center><img src={{image}}></center>
+		<p id="section1" align="justify">{{Conclusion}}</p>
+		<h2 id="section2" style="text-align: center;">Referências</h2>
+		<ul>
+			{% for el in references  %}
+				<li><h4><a href="{{el}}" target="_blank">{{el}}</a></h4></li>
+			{% endfor %}
+		</ul>
+
+		<center>
+		<h4><a href="{{link}}" target="_blank">Aceder ao relatório completo em PDF</a></h4>
+		<a href="javascript:history.back()">Go back</a><br><br>
+		</center>
+	</body>
+	</html>

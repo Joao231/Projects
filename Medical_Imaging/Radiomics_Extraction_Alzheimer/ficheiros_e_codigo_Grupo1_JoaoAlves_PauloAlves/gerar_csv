@@ -1,0 +1,30 @@
+echo "ID,Image,Mask" >> /mnt/d/uminho/gulbenkian2/paths.csv
+for f in *; do
+	if [[ $f == *"example"* ]]; then
+		break
+	fi
+        cd "$f"
+        for g in *; do
+                cd "$g"
+                for h in *; do
+                        cd "$h"
+                      	for i in *; do
+                                cd "$i"
+                                for j in *; do
+                                        if [ -f "$j" ]; then
+                                             if [[ $j != *"_mask.nii.gz"* ]] && [[ $j != *"_generate.nii.gz"* ]]; then
+                                                	RELATIVE_PATH=${i#"$j"}
+                                                	file=${j#"$i/"}
+                                                	file=${file%%.*}
+               	                                	echo "$i/$file","/mnt/d/uminho/gulbenkian2/$1/$f/$g/$h/$RELATIVE_PATH/$j","/mnt/d/uminho/gulbenkian2/$1/$f/$g/$h/$RELATIVE_PATH/$file"_generate_mask.nii.gz"" >> /mnt/d/uminho/gulbenkian2/paths.csv
+                                           	fi
+                                        fi
+                                done
+                                cd ..
+                        done
+                        cd ..
+                done
+                cd ..
+        done
+        cd ..
+done

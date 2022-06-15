@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Index</title>
+<style>
+	body{
+	background-color: cyan;
+	}
+	h1{
+	color: brown;
+	}
+	<title>Autores dos Relatórios</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</style>	
+{% endblock %}
+
+{% block body %}
+	<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+	<h1 style="text-align: center;">AUTORES DOS RELATÓRIOS</h1>
+	<center><br><a href="/">Go back</a><center>
+	<hr><br>
+	{% for el in dic_autores  %}
+		<center><h4><a href="/relatorios/relatorio/autor/<{{el}}>">{{dic_autores[el]['name']}}</a></h4>
+		<p>Número: {{dic_autores[el]['number']}}</p>
+		<p>Email: <a href="mailto:{{el['email']}}"> {{dic_autores[el]['email']}}</a></p>
+		<p>Telefone: <a href="tel:{{el['telephone']}}">{{dic_autores[el]['telephone']}}</a></p><br>
+	{% endfor %}
+	</center>
+
+{% endblock %}

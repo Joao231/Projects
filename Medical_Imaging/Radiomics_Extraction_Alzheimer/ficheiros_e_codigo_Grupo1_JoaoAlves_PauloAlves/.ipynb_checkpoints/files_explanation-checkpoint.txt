@@ -1,0 +1,37 @@
+final_final.csv - all 568 exams(all 568 exams had MMSE score)
+
+todos.csv - all 816 exams (not all 816 exams had MMSE score)
+
+final.csv - all 568 exams (only 2 exams with no MMSE score)
+
+final_final1.csv - all 568 exams (with the MMSE and Global CDR scores)
+
+features.csv - all the radiomics features
+
+cleaned_features.csv - only the numeric radiomics features
+
+final_cleaned_features.csv - 386 exams that were obtained with the techniques ("B1-calibration Body","B1-calibration Head","MPRAGE","MPRAGE Repeat")
+
+no_bad_descript.csv - csv file with the exams obtained with the techniques ("B1-calibration Body","B1-calibration Head","MPRAGE","MPRAGE Repeat")
+
+model_dataset.csv - csv file with the radiomics and clinical data of all 168 exams (exams with transitions)
+ 
+last_model_dataset.csv - csv file with the radiomics and clinical data of all 168 exams (exams with transitions) but with normalize data
+
+no_transitions.csv - csv file with the radiomics and clinical data of all 218 exams (exams with no transitions)
+
+no_transitions_normalized.csv - csv file with the radiomics and clinical data of all 218 exams (exams with no transitions) but with normalize data
+
+example - script to obtain all the masks of all images volumes that were extracted from ADNI
+
+gerar_csv - script to obtain a csv file which has the ID, Image path and Mask path to apply the pyradiomics package
+
+params.yamls - file that contains all the filters applied to the images to extract the radiomic features
+
+auxiliar.ipynb - notebook taht contains all the code that was used to the treatment of the data
+
+transitions.ipynb - notebook that contains the models (MLP and XGBoost), Feature Importance and Shap Values for all the exams that had transitions
+
+no_transitions.ipynb - notebook that contains the models (MLP and XGBoost), Feature Importance and Shap Values for all the exams that hadn't transitions
+
+

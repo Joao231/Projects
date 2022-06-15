@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<header class="w3-container w3-black">
+        <div class="w3-container w3-center w3-brand-logo">
+            <h1><b>Clínica Alves_LDA<b></h1>
+        </div>
+ </header>
+<head>
+    <style>
+        body{background-color: lavenderblush;}
+    </style>
+</head>
+{% block content %}
+<br><br>
+<center>
+        <h3><b>Nome: </b>{{utente.nome}}</h3>
+        <h3><b>Morada: </b>{{utente.morada}}</h3>
+        <h3><b>NIF: </b>{{utente.nif}}</h3>
+        <h3><b>CC: </b>{{utente.cc}}</h3>
+        <h3><b>Data de nascimento: </b>{{utente.datanasc}}</h3>
+        <h3><b>Número de Utente: </b>{{utente.numutente}}</h3>
+        <h3><b>Telefone: </b>{{utente.telefone}}</h3>
+        <h3><b>Telefone de emergência: </b>{{utente.telefone_emergencia}}</h3>
+        <h3><b>Email: </b>{{utente.email}}</h3><br>
+     <input type=button value="Voltar" onClick="javascript:history.go(-1);">
+    </div>
+</center>
+{% endblock %}

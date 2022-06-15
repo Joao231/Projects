@@ -1,0 +1,16 @@
+{% extends 'base2.html' %}
+ {% block content %}
+      <div class="w3-panel w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:35%">
+            <h3 class="w3-opacity">Introduza o nome do medicamento pretendido:</h3>
+                 <form action="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/medicamento/ver/{{id}}/{{idu}}" method="get">
+                    {% csrf_token %}
+                         <table>
+                             {{form.as_table}}
+                         </table>
+                                <div align="center">
+                                     <input type="submit" value="Submit"/>
+                                </div>
+                     <br><center><input type=button value="Voltar" onClick="javascript:history.go(-1);"></center>
+                 </form>
+      </div>
+{% endblock %}

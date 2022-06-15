@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<style>
+		table,th,td{
+			border:1px solid black;
+			border-collapse: collapse;
+		}
+		th,td{
+			padding:15px;
+			text-align:center;
+		}
+		body{
+		background-color: aliceblue;
+		}
+		h1{
+		color: brown;
+		}
+		<title>PORTFÓLIO</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</style>		
+	</head>
+
+	<body>
+		<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+		<h1 style="text-align: center;">Relatórios</h1><br>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<center><form class="pesquisa" action="/pesquisa" method="post">
+		  <input type="text" placeholder="Search.." name="search" size="50">
+		  <button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+		<br><br><a href="javascript:history.back()">Go back</a></center>
+		<hr>
+		<br><br>
+		<center><table style="width:80%">
+			<tr>
+				<th> </th>
+				<th><h3>Tipo</h3></th>
+				<th><h3>Designação</h3></th>
+			</tr>
+			{% for el in dic_subt  %}
+			<tr>
+				<td><h4>Relatorio {{el}}</h4></td>
+				<td><h4>{{dic_subt[el][0]}}</h4></td>
+				<td><h4><a href="/relatorios/relatorio/<{{el}}>">{{dic_subt[el][1]}}</a></h4></td>
+			</tr>
+			{% endfor %}
+		</table></center>
+	</body>
+
+</html>

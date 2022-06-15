@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block head%}
+<style>
+    body{
+    background-color: cyan;
+    }
+    h1{
+    color: red;
+    }
+    <title>{{title}}</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</style>
+{% endblock %}
+
+{% block body%}
+<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+<br><br><h3>{{title}}</h3>
+<h6>Atenção: Os espaços marcados com * são de preenchimento obrigatório. Dentro de cada espaço separe por "&" se tiver multiplos dados para a mesma posição.</h6>
+<center><a href="javascript:history.back()">Go back</a><br></center>
+<hr><br>
+<form action="update/novo1/<{{id}}>" method='post'>
+   <center><b><label>Título:</label>
+    <input type="text" name="title" value = "{{tit}}" size="150"><br><br>
+    <label>Subtítulo:*</label>
+    <input type="text" name="subtitle" value = "{{subt}}" required size="150"><br><br>
+    <label>Link_Imagem_Capa:</label>
+    <input type="text" name="iimage" value = "{{iimage}}" size="150"><br><br>
+
+    
+    <label>Nome_Autores:*</label>
+    <input type="text" name="name" value = "{{authors}}" required size="150"><br><br>
+    <label>Numero_Autores:*</label>
+    <input type="text" name="number" value = "{{number}}" required size="150"><br><br>
+    <label>Email_Autores:</label>
+    <input type="text" name="email" value = "{{email}}" size="150" ><br><br>
+    <label>Telefone_Autores:</label>
+    <input type="text" name="telephone" value = "{{telephone}}" size="150"><br><br> 
+   
+    <label>Curso:</label>
+    <input type="text" name="masters" value = "{{Masters}}" size="150"><br><br>
+
+    <label>Introdução:*</label><br>
+    <textarea name="introduction" rows="5" cols="200">{{Introduction}}</textarea><br><br>
+    
+    <label>Enunciado:</label><br>
+    <textarea name="enunciated" rows="7" cols="200">{{enunciated}}</textarea><br><br>
+
+    <label>Resposta:</label><br>
+    <textarea name="answer" rows="7" cols="200">{{answer}}</textarea><br><br>
+
+    <label>Explicação/Resolução:</label><br>
+    <textarea name="resolution" rows="7" cols="200">{{resolution}}</textarea><br><br>
+   
+    <label>Referencias:*</label><br>
+    <textarea name="references" rows="3" cols="150">{{references}}</textarea><br><br>
+    
+    <label>Link_Ficheiro:*</label>
+    <input type="text" name="link" value = "{{link}}" required size="150"><br><br>
+
+    <label>Descrição:*</label>
+    <input type="text" name="description" value = "{{description}}" required size="150"><br><br>
+    
+    <br><input type="submit" value="Submit"><br><br></b></center>
+{% endblock %}

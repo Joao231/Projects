@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head%}
+<style>
+    body{
+    background-color: cyan;
+    }
+    h1{
+    color: red;
+    }
+    <title>{{title}}</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</style>
+{% endblock %}
+
+{% block body%}
+<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+<br><br><h3>{{title}}</h3>
+
+<hr>
+<form action="/relatorio/delete" method='post'>
+    <center><b><label>Digite o(s) número(s) do(s) relatório(s) que pretende eliminar separados por vírgulas se for mais que um:</label></b><br>
+    <input type="text" name="response"><br><br>
+    <input type="submit" value="Delete"><br>
+    <br><br><br>
+    <a href="javascript:history.back()">Go back</a><br></center>
+</form>
+{% endblock %}

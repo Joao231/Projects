@@ -1,0 +1,11 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/" class="w3-button w3-block w3-black">Realizar Consulta</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/hist_consultas/" class="w3-button w3-block w3-black">Ver Histórico de Consultas</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/sair/" class="w3-button w3-block w3-black">Logout</a></button>
+    </form>
+{% endblock %}

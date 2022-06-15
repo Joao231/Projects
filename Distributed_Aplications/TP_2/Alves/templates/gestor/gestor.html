@@ -1,0 +1,27 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/adicionar_medico/" class="w3-button w3-block w3-black">Adicionar Médicos</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/adicionar_funcionario/" class="w3-button w3-block w3-black">Adicionar Funcionários</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/adicionar_medicamento/" class="w3-button w3-block w3-black">Adicionar Medicamentos</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/ver_listaU/" class="w3-button w3-block w3-black">Ver Lista de Utentes</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/ver_listaM/" class="w3-button w3-block w3-black">Ver Lista de Médicos</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/ver_listaF/" class="w3-button w3-block w3-black">Ver Lista de Funcionários</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/ver_listaMedicamentos/" class="w3-button w3-block w3-black">Ver Lista de Medicamentos</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/ver_idade/" class="w3-button w3-block w3-black">Ver Utentes por Idade</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/gestor/{{username}}/povoar/" class="w3-button w3-block w3-black">Povoar através de Ficheiro</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/sair/" class="w3-button w3-block w3-black">Logout</a></button>
+
+    </form>
+{% endblock %}

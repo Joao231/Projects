@@ -1,0 +1,15 @@
+{% extends 'base2.html' %}
+ {% block content %}
+      <div class="w3-panel w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:35%">
+            <h3 class="w3-opacity">Veja as Consultas que tem marcadas:</h3>
+                 <form action="/alves_lda/medico/{{username}}/realizar_consulta/entradagenda_medico/ver" method="get">
+                    {% csrf_token %}
+                         <table>
+                             {{form.as_table}}
+                         </table><br>
+                     <input type="submit" value="Submit"/>
+
+                     <center><button class="button button4"><a href="/alves_lda/medico/{{username}}/realizar_consulta/">Voltar</a></button></center>
+                 </form>
+      </div>
+{% endblock %}

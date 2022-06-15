@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<header class="w3-container w3-black">
+        <div class="w3-container w3-center w3-brand-logo">
+            <h1><b>Clínica Alves_LDA<b></h1>
+        </div>
+ </header>
+
+<head>
+    <style>
+        body{background-color: lavenderblush;}
+    </style>
+</head>
+
+
+{% block content %}
+
+    <h2 class="w3-opacity"/></h2><br><br>
+    <center>
+        <h3><b>ID da Ficha Médica:</b> {{ fichamedica.id_ficha }}</h3>
+        <h3><b>Número de Utente:</b> {{ fichamedica.utente.numutente }}</h3>
+        <h3><b>Utente:</b> {{ fichamedica.utente }}</h3>
+        <h3><b>Histórico:</b> {{ fichamedica.historico }}</h3>
+
+        <br><br>
+
+        <h2><b>Medições:</b></h2>
+        <table border="1">
+            <tr>
+                <td><b>ID Medicao</b></td>
+                <td><b>Data</b></td>
+                <td><b>Peso</b></td>
+                <td><b>Glicemia</b></td>
+                <td><b>Altura</b></td>
+                <td><b>Tensão Arterial</b> </td>
+                <td><b>Colesterol</b></td>
+                <td><b>Trigliceridios</b></td>
+                <td><b>Saturação</b></td>
+                <td><b>INR</b></td>
+            </tr>
+             {% for item in medicoes %}
+             <tr>
+                <td>{{ item.id_medicao }}</td>
+                <td>{{ item.data }}</td>
+                <td>{{ item.peso }}</td>
+                <td>{{ item.glicemia }}</td>
+                <td>{{ item.altura }}</td>
+                <td>{{ item.tensaoarterial }}</td>
+                <td>{{ item.colesterol }}</td>
+                <td>{{ item.trigliceridios }}</td>
+                <td>{{ item.saturacao }}</td>
+                <td>{{ item.inr }}</td>
+            </tr>
+             {% endfor %}
+        </table>
+        <br><input type=button value="Voltar" onClick="javascript:history.go(-1);"><br>
+{% endblock %}

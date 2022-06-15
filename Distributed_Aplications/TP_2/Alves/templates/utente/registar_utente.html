@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+
+
+{% block content %}
+    <div class="w3-panel w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:35%">
+        <h5 class="w3-opacity">UTENTE: O Username deve ser da forma: U##, com ## o seu número de utente:</h5>
+             <form method="POST">
+                {% csrf_token %}
+                 {{ form.as_p }}
+                <br><button class="button" type="submit">Registar</button>
+             </form>
+            Se já possui conta, faça <a href="/alves_lda/loginutente/"><strong>Login</strong></a>.
+    </div>
+{% endblock %}

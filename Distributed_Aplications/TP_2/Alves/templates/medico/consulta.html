@@ -1,0 +1,30 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/marcar_exame/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Marcar Exame</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/medicoes/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Adicionar Medições</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/medicamento/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Ver Informações de Medicamentos</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/prescricoes/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Adicionar Prescrições</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/observacoes/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Adicionar Observações da Consulta</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/historico/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Adicionar Histórico na Ficha Médica</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/ver_ficha_u/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Ver Ficha Médica do Utente</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/ver_exames_u/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Ver Exames do Utente</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/ver_consultas_u/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Ver Consultas do Utente</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/ver_prescricoes_c/{{id}}/{{idu}}" class="w3-button w3-block w3-black">Ver Prescrições de uma Consulta</a></button>
+
+            <br>
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/medico/{{username}}/">Concluído</a></button>
+
+    </form>
+{% endblock %}
+

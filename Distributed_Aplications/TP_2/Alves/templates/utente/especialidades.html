@@ -1,0 +1,29 @@
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<header class="w3-container w3-black">
+        <div class="w3-container w3-center w3-brand-logo">
+            <h1><b>Clínica Alves_LDA<b></h1>
+        </div>
+ </header>
+
+<head>
+    <style>
+        body{background-color: lavenderblush;}
+    </style>
+</head>
+
+{% block content %}
+
+    <h2 class="w3-opacity">Lista de Especialidades existentes na nossa Clínica:</h2>
+        <center>
+            {% for item in lista %}
+                <h2>{{item}}</h2>
+        {% endfor %}
+        </table>
+    <br><input type=button value="Voltar" onClick="javascript:history.go(-1);">
+
+{% endblock %}

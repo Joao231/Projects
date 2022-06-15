@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head%}
+<style>
+    body{
+    background-color: cyan;
+    }
+    h1{
+    color: red;
+    }
+    <title>{{title}}</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</style>
+{% endblock %}
+
+{% block body%}
+<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+<br><br><h3>{{title}}</h3>
+<h6>Atenção: Os espaços marcados com * são de preenchimento obrigatório. Dentro de cada espaço separe por "&" se tiver multiplos dados para a mesma posição. </h6><br>
+<center><a href="javascript:history.back()">Go back</a><br></center>
+<hr><br>
+<form action="relatorio/novo1" method='post'>
+    <center><b><label>Título:</label>
+    <input type="text" name="title" size="150"><br><br>
+    <label>Subtítulo:*</label>
+    <input type="text" name="subtitle" required size="150"><br><br>
+    <label>Link_Imagem_Capa:</label>
+    <input type="text" name="iimage" size="150"><br><br>
+    <label>Nome_Autor:*</label>
+    <input type="text" name="name" required size="150"><br><br>
+    <label>Numero_Autor:*</label>
+    <input type="text" name="number" required size="150"><br><br>
+    <label>Email_Autor:</label>
+    <input type="text" name="email" size="150"><br><br>
+    <label>Telefone_Autor:</label>
+    <input type="text" name="telephone" size="150"><br><br>
+    <label>Curso:</label>
+    <input type="text" name="masters" size="150"><br><br>
+    <label>Introdução:*</label><br>
+    <textarea name="introduction" rows="3" cols="150"></textarea><br><br>
+    <label>Enunciado:</label><br>
+    <textarea name="enunciated" rows="3" cols="150"></textarea><br><br>
+    <label>Resposta:</label><br>
+    <textarea name="answer" rows="3" cols="150"></textarea><br><br>
+    <label>Explicação/Resolução:</label><br>
+    <textarea name="resolution" rows="3" cols="150"></textarea><br><br>
+    <label>Referencias:*</label><br>
+    <textarea name="references" rows="3" cols="150"></textarea><br><br>
+    <label>Link_Ficheiro:*</label>
+    <input type="text" name="link" required size="150"><br><br>
+    <label>Descrição:*</label>
+    <input type="text" name="description" required size="150"><br><br>
+    <center><br><input type="submit" value="Submit"><br><br></b></center>
+{% endblock %}

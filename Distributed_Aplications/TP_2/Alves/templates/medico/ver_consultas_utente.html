@@ -1,0 +1,17 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+    <div class="w3-panel w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:35%">
+        <h3 class="w3-opacity">Introduza o Utente do qual quer ver consultas:</h3>
+            <form action="/alves_lda/medico/{{username}}/ver_consultas_u/consulta/" method="get">
+                {% csrf_token %}
+                    <table>
+                     {{form.as_table}}
+                    </table>
+                 <div align="center">
+                     </b><input type="submit" value="Submit"/>
+                 </div>
+            <br><input type=button value="Voltar" onClick="javascript:history.go(-1);">
+            </form>
+    </div>
+{% endblock %}

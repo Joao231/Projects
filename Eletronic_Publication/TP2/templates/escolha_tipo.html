@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head%}
+<style>
+    body{
+    background-color: cyan;
+    }
+    h1{
+    color: red;
+    }
+    <title>{{title}}</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</style>
+{% endblock %}
+
+{% block body%}
+<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+<br><br><h3>{{title}}</h3>
+<hr>
+<br><br>
+<center><a class="btn btn-info" href="/relatorio_adiciona1">Tipo_1</a><br><br>
+<p><b>Capa, Introdução, Questões (Enunciado, Resposta e Resolução), Bibliografia, Link do ficheiro e Descrição</b></p>
+<br><br><br><a class="btn btn-info" href="/relatorio_adiciona2">Tipo_2</a><br><br>
+<p><b>Capa, Conteúdo, Conclusão, Bibliografia, Link do ficheiro e Descrição</p></b></center><br><br><br>
+
+<br><center><a href="javascript:history.back()">Go back</a><br></center>
+{% endblock %}

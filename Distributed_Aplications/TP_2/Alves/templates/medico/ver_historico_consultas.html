@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<header class="w3-container w3-black">
+        <div class="w3-container w3-center w3-brand-logo">
+            <h1><b>Clínica Alves_LDA<b></h1>
+        </div>
+ </header>
+
+<head>
+    <style>
+        body{background-color: lavenderblush;}
+    </style>
+</head>
+
+{% block content %}
+
+    <h2 class="w3-opacity"/>Listas de Consultas do médico {{username}}:</h2>
+        <center><table border="1">
+
+            <tr>
+                <td style="text-align: center; vertical-align: middle;"><b>ID da Consulta</b></td>
+                <td style="text-align: center; vertical-align: middle;"><b>Data</b></td>
+                <td style="text-align: center; vertical-align: middle;"><b>Número de Utente</b></td>
+                <td style="text-align: center; vertical-align: middle;"><b>Utente</b></td>
+
+            </tr>
+            {% for item in consultas %}
+            <tr>
+                <td style="text-align: center; vertical-align: middle;">{{ item.1.id_consulta }}</td>
+                <td style="text-align: center; vertical-align: middle;">{{ item.1.data }}</td>
+                <td style="text-align: center; vertical-align: middle;">{{ item.0.numutente }}</td>
+                <td style="text-align: center; vertical-align: middle;">{{ item.0.nome }}</td>
+
+            </tr>
+            {% endfor %}
+        </table><br>
+     <button class="button button4"><a href="/alves_lda/medico/{{username}}/">Voltar</a></button><br><br></center>
+
+{% endblock %}
+

@@ -1,0 +1,36 @@
+  
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Index</title>
+<style>
+	body{
+	background-color: white;
+	}
+	h1{
+	color: brown;
+	}
+	<title>PORTFÓLIO</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</style>	
+{% endblock %}
+
+
+{% block body %}
+<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+<h1 style="text-align: center;">PORTFÓLIO</h1>
+<hr>
+<br><br>
+<center><a class="btn btn-info" href="/relatorios">Relatórios</a><br><br>
+<a class="btn btn-info" href="/autores_relatorios">Autores dos relatórios</a><br><br>
+<a class="btn btn-info" href="/description">Description</a><br><br>
+<a class="btn btn-info" href="/add">Adicionar Relatórios</a><br><br>
+<a class="btn btn-info" href="/update">Update de relatórios</a><br><br>
+<a class="btn btn-info" href="/delete">Remover relatórios</a><br><br><br><br>
+<a class="btn btn-info" href="/autores_portfolio">Autores do Projeto</a><br><br></center>
+<h3 style="text-align: center;">Mestrado Integrado em Engenharia Biomédica</h3>
+<h3 style="text-align: center;">Publicação Eletrónica 2020/2021</h3> 
+
+{% endblock %}

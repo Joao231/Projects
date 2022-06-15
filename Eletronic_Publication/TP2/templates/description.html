@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Index</title>
+<style>
+	body{
+	background-color: cyan;
+	}
+	h1{
+	color: brown;
+	}
+	<title>Description</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</style>	
+{% endblock %}
+
+{% block body %}
+	<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+	<h1 style="text-align: center;">Description</h1>
+	<center><br><a href="/">Go back</a></center>
+	<hr>
+	{% for el in dic_descript  %}
+		<br><br><center><h3>{{el}}</h3><br></center>
+		{% for i in dic_descript[el]  %}
+			<center><h5><a href="/relatorios/relatorio/{{i[0]}}">{{i[1]}}</a></h5></center>
+		{% endfor %}
+	{% endfor %}
+{% endblock %}

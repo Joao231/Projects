@@ -1,0 +1,30 @@
+for f in *; do
+    if [[ $f == *"example"* ]]; then
+		break
+	fi
+    cd "$f"
+    for g in *; do
+        cd "$g"
+        for h in *; do
+            cd "$h"
+            for i in *; do
+                cd "$i"
+                for j in *; do
+                     if [ -f "$j" ] && [[ $j != *"_mask.nii.gz"* ]] ; then
+                        RELATIVE_PATH=${i#"$j"}
+                        file=${j#"$i/"}
+                        file=${file%%.*}
+                        echo "Patient id:" $f
+                        echo "$1/$f/$g/$h/$RELATIVE_PATH"
+                        echo "Processing file:"  $file
+                        bet $j $file"_generate.nii.gz" -m
+                    fi
+                done
+                cd ..
+            done
+            cd ..
+        done
+        cd ..
+    done
+    cd ..
+done

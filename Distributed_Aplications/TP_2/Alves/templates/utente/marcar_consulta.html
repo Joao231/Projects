@@ -1,0 +1,20 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+    <div class="w3-panel w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:35%">
+        <h3 class="w3-opacity">Marque a consulta:</h3>
+        <h6 class="w3-opacity">A Hora deverá ter o formato ##:00:00H ou ##:30:00H, sendo ## a hora pretendida.</h6>
+        <center><button class="button button4"><a href="/alves_lda/utente/{{username}}/marcar_consulta/horariofuncionamento">Horário de Funcionamento e Contactos</a></button></center><br>
+        <center><button class="button button4"><a href="/alves_lda/utente/{{username}}/marcar_consulta/especialidades">Lista de Especialidades</a></button></center><br>
+            <form action="/alves_lda/utente/{{username}}/marcar_consulta/marcar/" method="post">
+                {% csrf_token %}
+                     <table>
+                     {{form.as_table}}
+                    </table>
+                <div align="center">
+                     <input type="submit" value="Submit"/>
+                </div>
+            <button class="button button4"><a href="/alves_lda/utente/{{username}}/">Voltar</a></button>
+            </form>
+    </div>
+{% endblock %}

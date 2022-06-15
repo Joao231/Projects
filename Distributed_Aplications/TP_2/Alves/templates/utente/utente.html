@@ -1,0 +1,17 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/utente/{{username}}/marcar_consulta/" class="w3-button w3-block w3-black">Marcar Consulta</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/utente/{{username}}/veragenda/" class="w3-button w3-block w3-black">Consultas Agendadas</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/utente/{{username}}/cancelar_consulta/" class="w3-button w3-block w3-black">Cancelar Consulta</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/utente/{{username}}/historico_consultas/" class="w3-button w3-block w3-black">Consultas Realizadas</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/utente/{{username}}/historico_exames/" class="w3-button w3-block w3-black">Histórico de Exames</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/sair/" class="w3-button w3-block w3-black">Logout</a></button>
+    </form>
+{% endblock %}

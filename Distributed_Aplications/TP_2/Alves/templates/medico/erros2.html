@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base2.html' %}
+{% block content %}
+    <body>
+	<footer class="w3-container w3-black">
+		<div class="w3-row">
+              <h1 align="center">{{string}}</h1>
+        </div>
+	</footer>
+	<br>
+		<div align="center">
+			<input type=button value="Voltar" onClick="javascript:history.go(-1);">
+		</div>
+	</body>
+{% endblock %}

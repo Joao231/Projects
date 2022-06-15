@@ -1,0 +1,15 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/funcionario/{{username}}/adicionar_utente/" class="w3-button w3-block w3-black">Adicionar Novo Utente</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/funcionario/{{username}}/entrada_agenda/" class="w3-button w3-block w3-black">Ver Consultas marcadas por Utente</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/funcionario/{{username}}/medicamento/" class="w3-button w3-block w3-black">Ver Utentes por Medicamento</a></button>
+            
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/funcionario/{{username}}/ver_lista_u/" class="w3-button w3-block w3-black">Ver Informações de Utentes</a></button>
+
+            <button class="w3-button w3-block w3-black" style="margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%;width:40%"><a href="/alves_lda/sair/" class="w3-button w3-block w3-black">Logout</a></button>
+    </form>
+{% endblock %}

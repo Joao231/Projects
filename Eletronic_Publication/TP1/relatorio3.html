@@ -1,0 +1,63 @@
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<style>
+		body{
+		background-color: linen;
+		}
+		h1{
+		color: red;
+		}
+		<meta charset="UTF-8"/>
+		<title> Comunicações e Redes </title>
+	</style>
+	</head>
+	<body>
+		<img alt="logotipo EEUM" src="https://i.ibb.co/9njRV20/EEUM.png"/>
+		<h1 style="text-align: center;"> Comunicações e Redes </h1><br>
+		<h2 style="text-align: center;"> TP3: Transmissão de dados e Atrasos </h2><br>
+		<center><img src="https://fabiobmed.com.br/wp-content/uploads/2012/04/transmiss%C3%A3o-de-dados.jpg"/></center><br>
+	
+		<h3>Autores</h3>
+		<ul>
+			
+				<li> Ricardo Pereira : 84634 </li>
+			
+				<li> Maria Matos : 83999 </li>
+			
+		</ul>
+		<h3 style="text-align: center;"> Informática Médica 2020/2021 </h3><br>
+		<center><a href="#section1">Introdução</a>
+        <a href="#section2">Referências</a></center>
+        <hr>
+		<p id="section1" align="justify">O processo de envio de pacotes está sujeito a atrasos, ocasionados por vários fatores. Há 4 tipos principais de atrasos: atraso de processamento, atraso de fila, atraso de transmissão e atraso de propagação.A soma dos atrasos dá-nos o atraso total. Quanto maior este valor, menor será a velocidade de transmissão de dados na rede.</p>
+		<ol>
+			
+				<li><h3>Inicialmente, suponha que há apenas um link entre a origem e o destino. Suponha que todo o arquivo MP3 seja enviado como um pacote. O atraso de transmissão é:</h3></li>
+				<p>Resposta: 3 segundos</p>
+				<p>O atraso de transmissão calcula-se da seguinte forma:delay de transmissão=(tamanho do pacote)/(taxa de transmissão)=(30×10^6 bits)/(10×10^6 bits/s)=3s.</p>
+			
+				<li><h3>Referindo-se à pergunta acima, o atraso de ponta a ponta (atraso de transmissão mais atraso de propagação) é:</h3></li>
+				<p>Resposta: 3.05 segundos</p>
+				<p>O atraso de propagação é obtido a partir da seguinte equação:delay de propagação= (distância entre dois nós)/(velocidade de propagação)=(10000×10^3 m)/(2 × 10^8 m/s)=0.05s. Como o valor de atraso de transmissão calculado anteriormente foi de 3s, logo o atraso total é a soma do atraso de propagação e o atraso de transmissão, ou seja, 3.05s.</p>
+			
+				<li><h3>Referindo-se à pergunta acima, quantos bits a fonte terá transmitido quando o primeiro bit chegar ao destino:</h3></li>
+				<p>Resposta: 500000 bits</p>
+				<p>Quando o primeiro bit chegar ao destino irão ter ocorrido 0,5s, uma vez que esse bit necessita de 0,5s para se propagar da fonte para o destino. Durante esse tempo, é possível calcular o número de bits que a fonte poderá transmitir, visto que o atraso de transmissão calculado anteriormente corresponde aos 30 Mbit. Portanto, o número de bits transmitidos em 0,5s será: X=(0,05 × 30×10^6)/3=500000 bits.</p>
+			
+		</ol>
+		<h2 id="section2" style="text-align: center;">Referências</h2>
+		<ul>
+			
+				<li><h4><a href="https://docente.ifrn.edu.br/tadeuferreira/disciplinas/2012.2/redes-i-dependencia/Aula05.pdf" target="_blank">https://docente.ifrn.edu.br/tadeuferreira/disciplinas/2012.2/redes-i-dependencia/Aula05.pdf</a></h4></li>
+			
+		</ul><br>
+		<center>
+		<h4><a href="https://drive.google.com/file/d/1_I0cienfur1eseU_ocTcRS0pLjGtTj5j/view?usp=sharing" target="_blank">Aceder ao relatório completo em PDF</a></h4>
+		<a href="javascript:history.back()">Go back</a><br><br>
+		</center>
+	</body>
+	</html>
+
+	

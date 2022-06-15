@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<header class="w3-container w3-black">
+        <div class="w3-container w3-center w3-brand-logo">
+            <h1><b>Clínica Alves_LDA<b></h1>
+        </div>
+ </header>
+
+<head>
+    <style>
+        body{background-color: lavenderblush;}
+    </style>
+</head>
+
+{% block content %}
+    <br>
+    <h2 class="w3-opacity"/>Lista de Prescrições da Consulta pretendida:</h2><br>
+        <center><table border="1">
+
+            <tr>
+                <td style="text-align: center; vertical-align: middle;"><b>ID da Prescrição</b></td>
+                <td style="text-align: center; vertical-align: middle;"><b>Data</b></td>
+                <td style="text-align: center; vertical-align: middle;"><b>Toma</b></td>
+            </tr>
+            {% for item in prescricoes %}
+            <tr>
+                <td style="text-align: center; vertical-align: middle;">{{ item.id_prescricao }}</td>
+                <td style="text-align: center; vertical-align: middle;">{{ item.data }}</td>
+                <td style="text-align: center; vertical-align: middle;">{{ item.toma }}</td>
+
+            </tr>
+        {% endfor %}
+        </table></center><br><br>
+    <h3 class="w3-opacity">Insira o ID da Prescrição da qual pretende ver os Medicamentos:</h3>
+            <form action="/alves_lda/medico/{{username}}/realizar_consulta/adicionar/ver_prescricoes_c/prescricoes/{{lista_id}}/medicamento/{{id}}/{{idu}}" method="get">
+                {% csrf_token %}
+                    <table>
+                     {{form.as_table}}
+                    </table>
+
+                <input type="submit" value="Submit"/>
+
+
+            </form>
+            <center><br><input type=button value="Voltar" onClick="javascript:history.go(-1);"></center>
+
+{% endblock %}
